@@ -1,3 +1,25 @@
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<!--Example of Event Binding-->
+<label>Server Name</label>
+<!--<input
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)">-->
+
+<!--Example of Two way data binding-->
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+<!--<p>{{ serverName }} </p>-->
+
+<!--Example of Property and Event Binding-->
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()">Add Server</button>
+<!--<p [innerText]="allowNewServer"></p>-->
+<p>{{ serverCreationStatus }}</p>
+
+
 <app-server></app-server>
 <app-server></app-server>
